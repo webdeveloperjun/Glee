@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'slick';
 
 
 .header{
@@ -11,19 +12,19 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__logo{
-    font-size: 36px;
-    line-height: 58px;
-    color: $default;
-    display: flex;
-  }
 }
 
 .logo{
+  display: flex;
   &__img {
     max-height: 39px;
     max-width: 51px;
     margin-right: 15px;
+  }
+  &-title{
+    font-size: 36px;
+    line-height: 58px;
+    color: $default;
   }
 }
 
@@ -31,13 +32,13 @@
   &-list{
     display: flex;
   }
-  &-list__item + .menu-list__item{
-    margin-left: 30px;
-  }
   &-list__item-link{
     color: $accent;
     font-size: 15px;
     line-height: 12px;
+  }
+  &-list__item + .menu-list__item{
+    margin-left: 30px;
   }
 }
 
@@ -73,10 +74,11 @@
     height: 16px;
     border-radius: 50%;
     background-color: #fff;
+    color: $default;
     font-size: 10px;
     line-height: 18px;
     text-align: center;
-    top: 9px;
+    top: 8px;
     left: 118px;
     &:nth-child(2) {
       left: 65px;
@@ -94,7 +96,149 @@
   }
 }
 
+.slider-inner{
+  background-color: $slider;
+  &__item{
+    padding: 205px 300px;
+    position: relative;
+  }
+  &__title{
+    font-size: 72px;
+    line-height: 70px;
+    max-width: 430px;
+  }
+  &__subtitle{
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 45px 0;
+    color: $subtitle;
+  }
+  &__btn{
+    color: #fff;
+    display: block;
+    max-width: 200px;
+    height: 60px;
+    background-color: $subtitle;
+    position: relative; 
+    cursor: pointer;
+  }
+  &__btn-text{
+    display: block;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 25px;
+    
+  }
+  &__btn-arrow{
+    position: absolute;
+    top: 26px;
+    right: 18px;
+  }
+  &__bg-img{
+    position: absolute;
+    top: 100px;
+    right: 185px;
+  }
+}
 
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $contact;
+  margin-bottom: 35px;
+  &__item{
+    padding-bottom: 88px;
+  }
+  &__logo{
+    margin-bottom: 25px;
+  }
+  &__adress,
+  &__phone,
+  &__email{
+    display: block;
+    padding-bottom: 18px;
+  }
+  &__tittle{
+    color: #1f2044;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__list-link{
+    font-size: 14px;
+    line-height: 32px;
+  }
+  &__contact{
+    max-width: 200px;
+  }
+  &__nav{
+    width: 120px;
+  }
+  &__form{
+    display: flex;
+    width: 270px;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 35px;
+    color: $contact;
+    max-width: 230px;
+  }
+  &__form-input{
+    border: none;
+    padding: 0 12px;
+    width: 170px;
+    background-color: #fef7f0;
+    &::placeholder{  
+      font-size: 12px;
+      line-height: auto;
+      color: #234969;
+    }
+  }
+  &__form-btn{
+    border: none;
+    padding: 0 12px;
+    background-color: $subtitle;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &__copy{
+    font-size: 14px;
+    line-height: 32px;
+    color: $contact;
+    @extend %rubik-400;
+  }
+  &__nav{
+    display: flex;
+    @extend %rubik-400;
+  }
+  &__nav-item + .footer-bottom__nav-item{
+    padding-left: 8px;
+  }
+  &__nav-link{
+    &::after{
+      content: '|';
+      padding-left: 7px;
+    }
+  }
+  &__nav-link-last{
+    &::after{
+      content: '';
+      display: none;
+    }
+  }
+}
 
 
 

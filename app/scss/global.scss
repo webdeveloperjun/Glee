@@ -1,11 +1,30 @@
+html,
+body{
+  height: 100%;
+}
+
 body{
   color: $default;
+  @extend %myriadpro-400;
   font-size: 16px;
   line-height: 30px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex-grow: 1;
 }
 
 .container{
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+a{
+  color: $contact;
+  font-size: 14px;
+  line-height: 24px;
+  @extend %rubic-400;
 }
