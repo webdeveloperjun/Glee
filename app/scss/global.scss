@@ -28,3 +28,9 @@ a{
   line-height: 24px;
   @extend %rubic-400;
 }
+
+.title{
+  font-size: 36px;
+  line-height: auto;
+  color: $title;
+}
